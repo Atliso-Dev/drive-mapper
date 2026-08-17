@@ -80,4 +80,4 @@ Get-Content $env:LOCALAPPDATA\Atliso\DriveMapper.log -Tail 25
 
 ---
 
-Built by [Atliso](https://atliso.com). Full walkthrough: [Deploying Drive Mappings via Intune Without GPO](https://atliso.com/tools/intune-drive-mapper).
+Built by [Atliso](https://atliso.com). Full walkthrough: [Deploying Drive Mappings via Intune Without GPO](https://atliso.com/blog/deploying-drive-mappings-via-intune). Get the tool: [Intune Drive Mapper](https://atliso.com/tools/intune-drive-mapper).
