@@ -26,7 +26,7 @@ BeforeAll {
     Mock whoami { '"Group Name","Type","SID","Attributes"'; foreach ($g in $global:AtlisoGroups) { "`"CONTOSO\$g`",`"Group`",`"S-1-5-21`",`"Enabled`"" } }
     Mock net { }
     Mock Start-Sleep { }
-    Mock Get-PSDrive { if ($global:AtlisoExisting.ContainsKey($Name)) { [pscustomobject]@{ Name = $Name; DisplayRoot = $global:AtlisoExisting[$Name] } } }
+    Mock Get-PSDrive { $n = "$Name"; if ($global:AtlisoExisting.ContainsKey($n)) { [pscustomobject]@{ Name = $n; DisplayRoot = $global:AtlisoExisting[$n] } } }
     Mock Test-Path {
       $global:AtlisoAttempt++
       $global:AtlisoAttempt -ge $global:AtlisoReachableOn -and [bool]($global:AtlisoReachable | Where-Object { "$Path" -like $_ })
